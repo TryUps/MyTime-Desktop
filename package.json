@@ -1,0 +1,29 @@
+{
+  "name": "mytime-desktop",
+  "productName": "MyTime",
+  "version": "1.0.0",
+  "description": "MyTime Client app for Desktop devices.",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "electron-nightly": "^10.0.0-nightly.20200324"
+  },
+  "scripts": {
+    "start": "npx electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TryUps/MyTime-Desktop.git"
+  },
+  "keywords": [
+    "MyTime"
+  ],
+  "author": "Arilson B. Ferreira (arilsonbrj@gmail.com)",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/TryUps/MyTime-Desktop/issues"
+  },
+  "homepage": "https://github.com/TryUps/MyTime-Desktop#readme"
+}

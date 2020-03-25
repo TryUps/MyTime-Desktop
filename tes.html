@@ -1,0 +1,11 @@
+
+
+
+      protocol.registerBufferProtocol(PROTOCOL, (request, callback) => {
+        let uri = request.url.substr(PROTOCOL.length + 1);
+        uri = path.join(__dirname,FOLDER,uri);
+        uri = path.normalize(uri)
+        callback({path: uri})
+    }, (error) => {
+        console.error(error)
+    })

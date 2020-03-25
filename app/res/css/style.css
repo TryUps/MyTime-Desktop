@@ -1,0 +1,7 @@
+@import url('normalize.css');
+@import url('colors.css');
+@import url('app.css');
+
+body {
+    background-color: red;
+}
