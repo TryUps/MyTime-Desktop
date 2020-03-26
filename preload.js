@@ -1,0 +1,1 @@
+const { electron, app, BrowserWindow } = require('electron').remote()
