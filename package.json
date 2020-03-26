@@ -1,7 +1,7 @@
 {
   "name": "mytime-desktop",
   "productName": "MyTime",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.1",
   "description": "MyTime Client app for Desktop devices.",
   "main": "main.js",
   "dependencies": {
@@ -9,10 +9,43 @@
     "nedb": "^1.8.0"
   },
   "devDependencies": {
+    "electron-builder": "^22.4.1",
     "electron-nightly": "^10.0.0-nightly.20200324"
   },
   "scripts": {
-    "start": "npx electron ."
+    "postinstall": "install-app-deps",
+    "start": "npm install && npx electron .",
+    "pack": "build --dir",
+    "dist": "npx electron-builder -mwl"
+  },
+  "build": {
+    "appId": "ml.tryups.mytime",
+    "asar": true,
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "icon.png"
+    }
   },
   "repository": {
     "type": "git",
@@ -21,7 +54,7 @@
   "keywords": [
     "MyTime"
   ],
-  "author": "Arilson B. Ferreira (arilsonbrj@gmail.com)",
+  "author": "Arilson B. Ferreira <arilsonbrj@gmail.com>",
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/TryUps/MyTime-Desktop/issues"

@@ -1,6 +1,7 @@
+const path = require('path')
 const Datastore = require('nedb')
 const db = new Datastore({
-    filename:'app/db/user_settings.db',
+    filename: path.join(__dirname,'app/db','user_settings.db'),
     autoload:true
 })
 
