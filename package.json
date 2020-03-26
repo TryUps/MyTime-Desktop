@@ -5,7 +5,8 @@
   "description": "MyTime Client app for Desktop devices.",
   "main": "main.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nedb": "^1.8.0"
   },
   "devDependencies": {
     "electron-nightly": "^10.0.0-nightly.20200324"

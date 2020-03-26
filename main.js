@@ -9,21 +9,11 @@ let FOLDER = 'app'
 
 const createWindow = () => {
 
-    protocol.registerFileProtocol(PROTOCOL,(request, callback) => {
-        let uri = request.url.substr(PROTOCOL.length + 3)
-        uri = path.join(__dirname,FOLDER,uri)
-        if (uri) {
-            callback({ path:uri })
-        }else {
-            callback({ error: -324 })
-        }
-    }, (error) => {
-        if (error) console.error('Failed to register protocol')
-    })
-
     win = new BrowserWindow({
-        width: 700,
+        width: 810,
         height: 500,
+        minWidth:810,
+        minHeight:500,
         title: app.getName(),
         icon: path.join(__dirname,'icon.png'),
         titleBarStyle: 'hiddenInset',
