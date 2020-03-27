@@ -5,7 +5,10 @@
   "description": "MyTime Client app for Desktop devices.",
   "main": "main.js",
   "dependencies": {
+    "axios": "^0.19.2",
     "express": "^4.17.1",
+    "fs-extra": "^9.0.0",
+    "jquery": "^3.4.1",
     "nedb": "^1.8.0"
   },
   "devDependencies": {
@@ -14,6 +17,7 @@
   },
   "scripts": {
     "postinstall": "install-app-deps",
+    "test": "npx electron .",
     "start": "npm install && npx electron .",
     "pack": "build --dir",
     "dist": "npx electron-builder -mwl"

@@ -7,7 +7,7 @@ const db = new Datastore({
 
 let settings = {
     name:'tray-menu',
-    date: 'today',
+    date: Date.now(),
     value: true
 }
 db.insert(settings, (err) => {
