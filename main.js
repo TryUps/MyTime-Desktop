@@ -1,3 +1,5 @@
+'use strict';
+
 const { app, BrowserWindow, protocol, Menu, Tray } = require('electron')
 const path = require('path')
 const url = require('url')
@@ -10,10 +12,11 @@ let FOLDER = 'app'
 const createWindow = () => {
 
     win = new BrowserWindow({
-        width: 810,
+        width: 800,
         height: 500,
-        minWidth:810,
+        minWidth:800,
         minHeight:500,
+        maxWidth:800,
         title: app.getName(),
         icon: path.join(__dirname,'icon.png'),
         titleBarStyle: 'hiddenInset',
@@ -48,6 +51,8 @@ const createTray = () => {
 const toggleWindow = () => {
     win.isVisible() ? win.hide() : showWindow()
 }
+
+
 
 app.whenReady().then(createWindow).then(createTray)
 
