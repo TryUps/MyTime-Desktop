@@ -17,6 +17,17 @@
         </header>
         <main class="container" role="main">
             <section class="boxes">
+                <div class="box timer">
+                    <div class="in-box">
+                        <div class="box-title">
+                            <h3>Agora</h3>
+                        </div>
+                        <div class="box-content">
+                            <h1>88:88<small>:88</small></h1>
+                        </div>
+                        <div class="box-footer"></div>
+                    </div>
+                </div>
                 <div class="box box--2x timeli-box">
                     <div class="in-box">
                         <div class="box-title">
@@ -43,7 +54,7 @@
                 <div class="box">
                     <div class="in-box">
                         <div class="box-title">
-                            <h3>Olá Mundo</h3>
+                            <h3>Estatisticas</h3>
                         </div>
                         <div class="box-content"></div>
                         <div class="box-footer"></div>
@@ -52,7 +63,7 @@
                 <div class="box">
                     <div class="in-box">
                         <div class="box-title">
-                            <h3>Olá Mundo</h3>
+                            <h3>Otimização</h3>
                         </div>
                         <div class="box-content"></div>
                         <div class="box-footer"></div>
@@ -61,16 +72,7 @@
                 <div class="box">
                     <div class="in-box">
                         <div class="box-title">
-                            <h3>Olá Mundo</h3>
-                        </div>
-                        <div class="box-content"></div>
-                        <div class="box-footer"></div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="in-box">
-                        <div class="box-title">
-                            <h3>Olá Mundo</h3>
+                            <h3>${lang.icon-box}</h3>
                         </div>
                         <div class="box-content"></div>
                         <div class="box-footer"></div>
@@ -91,6 +93,23 @@
         </menu>
     </div>
     <div class="overlay"></div>
+    <div class="alert" id="trayAlert">
+        <div class="alert-box">
+            <div class="alert-title">
+                <h2>Deseja ativar o menu?</h2>
+            </div>
+            <div class="alert-content">
+                <p class="alert-text">
+                    O menu interativo auxilia você de modo mais rápido para lidar com suas funções do dia a dia. Com ele o aplicativo ficará oculto na bandeja de aplicativos do seu sistema e poderá ser acessado de modo rápido com apenas 1 clique.
+                </p>
+            </div>
+            <div class="alert-footer">
+                <button class="alert-btn" onClick="trayNo()">Manter Inativo</button>
+                <button class="alert-btn" onClick="trayYes()">Ativar</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/load.js"></script>
     <script src="res/js/template.js"></script>
     <script>if(typeof module === 'object'){window.module = module; module = undefined;}</script>
     <script>if(window.module)module = window.module;</script>

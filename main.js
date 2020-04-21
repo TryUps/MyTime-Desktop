@@ -43,18 +43,8 @@ const createWindow = () => {
     win.on('closed', () => win = null)
 }
 
-const createTray = () => {
-    tray = new Tray(path.join(__dirname,'icon.png'))
-    tray.on('click', () => toggleWindow())
-}
 
-const toggleWindow = () => {
-    win.isVisible() ? win.hide() : showWindow()
-}
-
-
-
-app.whenReady().then(createWindow).then(createTray)
+app.whenReady().then(createWindow)
 
 const showWindow = () => {
     win.show();

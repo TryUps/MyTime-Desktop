@@ -1,15 +1,11 @@
-const path = require('path')
-const Datastore = require('nedb')
-const db = new Datastore({
-    filename: path.join(__dirname,'app/db','user_settings.db'),
-    autoload:true
-})
+const path = require('path'),
+      sqlite = require('sqlite3').verbose(),
+      dbpath = '../app/db',
+      db = {}
 
-let settings = {
-    name:'tray-menu',
-    date: Date.now(),
-    value: true
-}
-db.insert(settings, (err) => {
-    console.error(err)
+db['to-do'] = new sqlite.Database(path.join(__dirname,dbpath,'to-do.db'), (err) => (err === null) ? false : console.error( err.message ) )
+
+db['to-do'].serialize(() => {
+    //db['settings'].run("CREATE TABLE users (user TEXT)")
+    return false;
 })
